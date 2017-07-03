@@ -1,0 +1,7 @@
+#Sat Jul 01 16:34:09 PDT 2017
+base.0=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a704be96219d958e07e0c42b1f3eab438189dddd
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a2b48bdf1d940a4bb2e8ac86069983d010e41e85/classes.dex
+base.1=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a2b48bdf1d940a4bb2e8ac86069983d010e41e85
+file.0=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a704be96219d958e07e0c42b1f3eab438189dddd/classes.dex

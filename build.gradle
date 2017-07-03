@@ -1,0 +1,52 @@
+repositories {
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.1'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+dependencies {
+    compile 'com.amazonaws:aws-android-sdk-s3:2.2.+'
+    compile 'com.android.support:appcompat-v7:19.1.0'
+    compile 'com.android.support:support-v4:19.1.0'
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
+    compile group: 'com.google.guava', name: 'guava', version: 'r05'
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2.1'
+}
+
+android {
+    buildToolsVersion '25.0.0'
+    compileSdkVersion 19
+
+    defaultConfig {
+        versionCode 1
+        versionName "1.0.0"
+        minSdkVersion 11
+        targetSdkVersion 11
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+    }
+}

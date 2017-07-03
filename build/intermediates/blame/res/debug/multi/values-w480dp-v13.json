@@ -1,0 +1,64 @@
+[
+    {
+        "outputFile": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w480dp-v13/values-w480dp-v13.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 61,
+                    "endOffset": 112
+                },
+                "from": {
+                    "file": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/values-w480dp/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 280,
+                        "endColumn": 61,
+                        "endOffset": 337
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 117,
+                    "endColumn": 71,
+                    "endOffset": 184
+                },
+                "from": {
+                    "file": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/values-w480dp/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 567,
+                        "endColumn": 71,
+                        "endOffset": 634
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 189,
+                    "endColumn": 60,
+                    "endOffset": 245
+                },
+                "from": {
+                    "file": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/values-w480dp/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 863,
+                        "endColumn": 60,
+                        "endOffset": 919
+                    }
+                }
+            }
+        ]
+    }
+]

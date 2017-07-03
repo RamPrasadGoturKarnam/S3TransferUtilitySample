@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="58b77c90b8d609854b2bd997914dd9735e0d3c2e">
+        <dex dex="/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a704be96219d958e07e0c42b1f3eab438189dddd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a2b48bdf1d940a4bb2e8ac86069983d010e41e85/classes.dex" />
+    </item>
+
+</items>
