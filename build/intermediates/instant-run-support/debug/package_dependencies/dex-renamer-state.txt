@@ -1,22 +1,25 @@
-#Sat Jul 01 16:34:08 PDT 2017
-renamed.6=classes.dex
-renamed.5=classes5.dex
-renamed.4=classes3.dex
+#Thu Jul 06 22:45:28 PDT 2017
+renamed.7=classes.dex
+renamed.6=classes5.dex
+renamed.5=classes3.dex
+renamed.4=classes8.dex
 renamed.3=classes7.dex
 renamed.2=classes6.dex
 renamed.1=classes4.dex
 renamed.0=classes2.dex
-base.6=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-core-2.2.22_429f55de397a4d5a3a729a19c5dbf499f66a164f
-base.5=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.3.1_a8d4000e5f95a7640c44e1d330f90bc6d3090694
-base.4=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b1264dabc4414cf48a60620d42b32c9aedddfb13
-base.3=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_33c1342c440ec406ae1843be55bdee0e1f79c12a
+base.7=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-core-2.2.22_429f55de397a4d5a3a729a19c5dbf499f66a164f
+base.6=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.3.1_a8d4000e5f95a7640c44e1d330f90bc6d3090694
+base.5=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b1264dabc4414cf48a60620d42b32c9aedddfb13
+base.4=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_33c1342c440ec406ae1843be55bdee0e1f79c12a
+base.3=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.2.0_5870e51914b65981be131bf192bdb245fcfa2907
 base.2=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/guava-r05_64e94083703d28125b9da4902b9000981a4df173
 base.1=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/commons-collections-3.2.1_7a3392a56a3f85dbd53cb7b64d4bed13bb0746ea
 base.0=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-s3-2.2.22_a0d7f9a6a85b1a85d6d5d29146087e7de2d21d8f
-file.6=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-core-2.2.22_429f55de397a4d5a3a729a19c5dbf499f66a164f/classes.dex
-file.5=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.3.1_a8d4000e5f95a7640c44e1d330f90bc6d3090694/classes.dex
-file.4=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b1264dabc4414cf48a60620d42b32c9aedddfb13/classes.dex
-file.3=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_33c1342c440ec406ae1843be55bdee0e1f79c12a/classes.dex
+file.7=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-core-2.2.22_429f55de397a4d5a3a729a19c5dbf499f66a164f/classes.dex
+file.6=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.3.1_a8d4000e5f95a7640c44e1d330f90bc6d3090694/classes.dex
+file.5=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b1264dabc4414cf48a60620d42b32c9aedddfb13/classes.dex
+file.4=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_33c1342c440ec406ae1843be55bdee0e1f79c12a/classes.dex
+file.3=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.2.0_5870e51914b65981be131bf192bdb245fcfa2907/classes.dex
 file.2=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/guava-r05_64e94083703d28125b9da4902b9000981a4df173/classes.dex
 file.1=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/commons-collections-3.2.1_7a3392a56a3f85dbd53cb7b64d4bed13bb0746ea/classes.dex
 file.0=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-s3-2.2.22_a0d7f9a6a85b1a85d6d5d29146087e7de2d21d8f/classes.dex

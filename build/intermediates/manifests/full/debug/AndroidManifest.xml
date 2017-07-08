@@ -47,7 +47,11 @@
             android:enabled="true" />
 
         <activity android:name="com.amazonaws.demo.s3transferutility.TestCurlActivity" />
-        <activity android:name="com.amazonaws.demo.s3transferutility.PhotoIntentActivity" />
+        <activity
+            android:name="com.amazonaws.demo.s3transferutility.PhotoIntentActivity"
+            android:configChanges="locale|touchscreen|orientation|screenLayout|screenSize|keyboardHidden|uiMode"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.amazonaws.demo.s3transferutility.TitleDescriptionActivity" />
     </application>
 
 </manifest>

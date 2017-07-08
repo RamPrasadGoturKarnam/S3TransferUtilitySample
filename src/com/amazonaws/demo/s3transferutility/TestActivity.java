@@ -35,7 +35,7 @@ public class TestActivity extends Activity {
        // transferUtility = Util.getTransferUtility(this);
        // beginUpload();
         if (savedInstanceState == null) {
-            TestFragment testFragment = new TestFragment();
+            YoutubeServiceFragment testFragment = new YoutubeServiceFragment();
             getFragmentManager().beginTransaction().add(android.R.id.content, testFragment).commit();
         }
     }

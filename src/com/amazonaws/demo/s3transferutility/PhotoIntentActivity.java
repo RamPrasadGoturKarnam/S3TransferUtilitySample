@@ -1,5 +1,6 @@
 package com.amazonaws.demo.s3transferutility;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -11,11 +12,14 @@ import java.util.List;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.ListActivity;
 import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -26,7 +30,9 @@ import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Display;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -36,12 +42,14 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
+import android.content.pm.ActivityInfo;
 
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferListener;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferObserver;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferState;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferType;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferUtility;
+import com.squareup.picasso.Picasso;
 
 import static android.R.attr.data;
 import static android.content.ContentValues.TAG;
@@ -50,7 +58,7 @@ import static com.amazonaws.demo.s3transferutility.UploadActivity.isExternalStor
 import static com.amazonaws.demo.s3transferutility.UploadActivity.isMediaDocument;
 
 
-public class PhotoIntentActivity extends Activity {
+public class PhotoIntentActivity extends ListActivity {
 
 	private static final int ACTION_TAKE_PHOTO_B = 1;
 	private static final int ACTION_TAKE_PHOTO_S = 2;
@@ -132,6 +140,7 @@ public class PhotoIntentActivity extends Activity {
 		
 		File f = createImageFile();
 		mCurrentPhotoPath = f.getAbsolutePath();
+        Picasso.with(getApplicationContext()).load(mCurrentPhotoPath).into(mImageView);
 		
 		return f;
 	}
@@ -149,24 +158,38 @@ public class PhotoIntentActivity extends Activity {
 		BitmapFactory.Options bmOptions = new BitmapFactory.Options();
 		bmOptions.inJustDecodeBounds = true;
 		BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
-		int photoW = bmOptions.outWidth;
-		int photoH = bmOptions.outHeight;
-		
-		/* Figure out which way needs to be reduced less */
-		int scaleFactor = 1;
-		if ((targetW > 0) || (targetH > 0)) {
-			scaleFactor = Math.min(photoW/targetW, photoH/targetH);	
-		}
+		//int photoW = bmOptions.outWidth;
+		//int photoH = bmOptions.outHeight;
 
+        int photoW = 2204;
+        int photoH = 2668;
+//        System.out.println("targetW "+targetW+" targetH "+targetH);
+//        System.out.println("photoW/targetW "+photoW/targetW);
+//        System.out.println("photoH/targetH "+photoH/targetH);
+//		/* Figure out which way needs to be reduced less */
+//		int scaleFactor = 1;
+//		if ((targetW > 0) || (targetH > 0)) {
+//            System.out.println("targetW "+targetW+" targetH "+targetH);
+//            System.out.println("photoW/targetW "+photoW/targetW);
+//            System.out.println("photoH/targetH "+photoH/targetH);
+//			scaleFactor = Math.min(photoW/targetW, photoH/targetH);
+//            System.out.println("scaleFactor "+scaleFactor);
+//		}
+        int scaleFactor = 0;
 		/* Set bitmap options to scale the image decode target */
-		bmOptions.inJustDecodeBounds = false;
-		bmOptions.inSampleSize = scaleFactor;
-		bmOptions.inPurgeable = true;
+//		bmOptions.inJustDecodeBounds = false;
+//		bmOptions.inSampleSize = scaleFactor;
+//		bmOptions.inPurgeable = true;
 
 		/* Decode the JPEG file into a Bitmap */
-		Bitmap bitmap = BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions);
+		Bitmap bitmappic = BitmapFactory.decodeFile(mCurrentPhotoPath);//, bmOptions);
+
+        Bitmap bitmap = getResizedBitmap(bitmappic, 200, 200);
+
+        //setimage.setImageBitmap(btm00);
 		
 		/* Associate the Bitmap to the ImageView */
+		System.out.println("resized image "+bitmap);
 		mImageView.setImageBitmap(bitmap);
 		mVideoUri = null;
 		mImageView.setVisibility(View.VISIBLE);
@@ -178,6 +201,7 @@ public class PhotoIntentActivity extends Activity {
 			File f = new File(mCurrentPhotoPath);
 		Log.i("gallerypic-->",f.getName());
 		    Uri contentUri = Uri.fromFile(f);
+
 			this.setPicUri(contentUri);
 		try {
 			String path = getPath(contentUri);
@@ -190,6 +214,27 @@ public class PhotoIntentActivity extends Activity {
 		}
 		    mediaScanIntent.setData(contentUri);
 		    this.sendBroadcast(mediaScanIntent);
+	}
+
+	private void galleryAddPic(String filepath) {
+		Intent mediaScanIntent = new Intent("android.intent.action.MEDIA_SCANNER_SCAN_FILE");
+		mCurrentPhotoPath = filepath;
+		File f = new File(mCurrentPhotoPath);
+		Log.i("gallerypic small -->",f.getName());
+		Uri contentUri = Uri.fromFile(f);
+
+		this.setPicUri(contentUri);
+		try {
+			String path = getPath(contentUri);
+			beginUpload(path);
+		} catch (URISyntaxException e) {
+			Toast.makeText(this,
+					"Unable to get the file from the given URI.  See error log for details",
+					Toast.LENGTH_LONG).show();
+			Log.e(TAG, "Unable to upload file from the given uri", e);
+		}
+		mediaScanIntent.setData(contentUri);
+		this.sendBroadcast(mediaScanIntent);
 	}
 
 	private void dispatchTakePictureIntent(int actionCode) {
@@ -227,11 +272,21 @@ public class PhotoIntentActivity extends Activity {
 
 	private void handleSmallCameraPhoto(Intent intent) {
 		Bundle extras = intent.getExtras();
+
 		mImageBitmap = (Bitmap) extras.get("data");
 		mImageView.setImageBitmap(mImageBitmap);
 		mVideoUri = null;
 		mImageView.setVisibility(View.VISIBLE);
 		mVideoView.setVisibility(View.INVISIBLE);
+
+		// CALL THIS METHOD TO GET THE URI FROM THE BITMAP
+		Uri tempUri = getImageUri(getApplicationContext(), mImageBitmap);
+
+		// CALL THIS METHOD TO GET THE ACTUAL PATH
+		File finalFile = new File(getRealPathFromURI(tempUri));
+
+		System.out.println("smallImage Uri "+finalFile.getPath());
+		galleryAddPic(finalFile.getPath());
 	}
 
 	private void handleBigCameraPhoto() {
@@ -270,13 +325,13 @@ public class PhotoIntentActivity extends Activity {
 		}
 	};
 
-	Button.OnClickListener mTakeVidOnClickListener = 
+	/*Button.OnClickListener mTakeVidOnClickListener =
 		new Button.OnClickListener() {
 		@Override
 		public void onClick(View v) {
 			dispatchTakeVideoIntent();
 		}
-	};
+	};*/
 
 	/** Called when the activity is first created. */
 	@Override
@@ -303,22 +358,71 @@ public class PhotoIntentActivity extends Activity {
 				MediaStore.ACTION_IMAGE_CAPTURE
 		);
 
-		Button vidBtn = (Button) findViewById(R.id.btnIntendV);
+		/*Button vidBtn = (Button) findViewById(R.id.btnIntendV);
 		setBtnListenerOrDisable( 
 				vidBtn, 
 				mTakeVidOnClickListener,
 				MediaStore.ACTION_VIDEO_CAPTURE
-		);
+		);*/
 		
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.FROYO) {
 			mAlbumStorageDirFactory = new FroyoAlbumDirFactory();
 		} else {
 			mAlbumStorageDirFactory = new BaseAlbumDirFactory();
 		}
+
+		//Screen orientation code
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
+       //Get current screen orientation
+        Display display = ((WindowManager) getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
+        int orientation = display.getOrientation();
+         switch(orientation) {
+            case Configuration.ORIENTATION_PORTRAIT:
+                setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+				Toast.makeText(this, "portrait", Toast.LENGTH_SHORT).show();
+                break;
+            case Configuration.ORIENTATION_LANDSCAPE:
+                setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+				Toast.makeText(this, "landscape", Toast.LENGTH_SHORT).show();
+                break;
+        }
+		//Screen orientation code
+
 		// Initializes TransferUtility, always do this before using it.
 		transferUtility = Util.getTransferUtility(this);
 		transferRecordMaps = new ArrayList<HashMap<String, Object>>();
 		initUI();
+	}
+
+
+	public Uri getImageUri(Context inContext, Bitmap inImage) {
+		ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+		inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+		String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
+		return Uri.parse(path);
+	}
+
+	public String getRealPathFromURI(Uri uri) {
+		Cursor cursor = getContentResolver().query(uri, null, null, null, null);
+		cursor.moveToFirst();
+		int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+		return cursor.getString(idx);
+	}
+
+	// Check screen orientation or screen rotate event here
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+        System.out.println("orientation-->"+newConfig.orientation);
+		// Checks the orientation of the screen for landscape and portrait and set portrait mode always
+		if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+			setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+			Toast.makeText(this, "portrait", Toast.LENGTH_SHORT).show();
+		} else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+			setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		}
 	}
 
 	@Override
@@ -488,6 +592,11 @@ public class PhotoIntentActivity extends Activity {
 
 
 	}
+    public static Bitmap getResizedBitmap(Bitmap bm, int newHeight, int newWidth) {
+
+        Bitmap resizedBitmap = Bitmap.createScaledBitmap(bm,(int)(bm.getWidth()*0.8), (int)(bm.getHeight()*0.8), true);
+        return resizedBitmap;
+    }
 
 	public String getImageName() {
 		return imageName;
@@ -543,7 +652,7 @@ public class PhotoIntentActivity extends Activity {
 		Bundle bundle = new Bundle();
 		bundle.putString("imagename",this.getImageName());
 
-		BlankFragment testFragment = new BlankFragment();
+		ImageParseFragment testFragment = new ImageParseFragment();
 		testFragment.setArguments(bundle);
 		getFragmentManager().beginTransaction().add(android.R.id.content, testFragment).commit();
 	}
@@ -642,10 +751,10 @@ public class PhotoIntentActivity extends Activity {
 				return false;
 			}
 		});
-		//setListAdapter(simpleAdapter);
+		setListAdapter(simpleAdapter);
 
 		// Updates checked index when an item is clicked
-		/*getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
+		getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> adapterView, View view, int pos, long id) {
 
@@ -659,7 +768,7 @@ public class PhotoIntentActivity extends Activity {
 					simpleAdapter.notifyDataSetChanged();
 				}
 			}
-		});*/
+		});
 
 
 	}
@@ -678,4 +787,6 @@ public class PhotoIntentActivity extends Activity {
 		simpleAdapter.notifyDataSetChanged();
 
 	}
+
+
 }

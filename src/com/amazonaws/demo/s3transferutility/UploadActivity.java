@@ -396,7 +396,7 @@ public class UploadActivity extends ListActivity {
        Bundle bundle = new Bundle();
         bundle.putString("imagename",this.getImageName());
 
-        BlankFragment testFragment = new BlankFragment();
+        ImageParseFragment testFragment = new ImageParseFragment();
       testFragment.setArguments(bundle);
         getFragmentManager().beginTransaction().add(android.R.id.content, testFragment).commit();
     }

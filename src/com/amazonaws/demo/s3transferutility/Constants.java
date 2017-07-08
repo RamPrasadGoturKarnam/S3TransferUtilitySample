@@ -44,4 +44,24 @@ public class Constants {
 
     public static final String YOUTUBE = "youtube";
     public static final String WIKIPEDIA = "wikipedia";
+    public static final String VIMEO = "vimeo";
+    public static final String AMAZON = "amazon";
+    public static final String AMAZON_UK = "amazonuk";
+
+    public static final String LINKEDIN = "linkedin";
+    public static final String DAILY_MOTION = "dailymotion";
+    public static final String TITLE = "title";
+    public static final String DESCRIPTION = "description";
+    public static final String GENERIC_LINK = "genericlink";
+    public static final String GETTY_IMAGES = "gettyimages";
+
+
+    public static final String YOUTUBE_PATTERN = "https://www.youtube.com/watch";
+    public static final String WIKIPEDIA_PATTERN = "https://en.wikipedia.org/wiki";
+    public static final String LINKEDIN_PATTERN = "https://www.linkedin.com/in/";
+    public static final String VIMEO_PATTERN = "https://vimeo.com/";
+    public static final String DAILY_MOTION_PATTERN = "https://www.dailymotion.com/video/";
+    public static final String AMAZON_PATTERN = "https://www.amazon.com/";
+    public static final String AMAZON_UK_PATTERN = "https://www.amazon.co.uk/";
+    public static final String GETTY_IMAGES_PATTERN = "http://www.gettyimages.com/photos/";
 }

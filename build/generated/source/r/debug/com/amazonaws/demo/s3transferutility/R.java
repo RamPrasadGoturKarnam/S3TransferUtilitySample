@@ -836,17 +836,14 @@ containing a value of this type.
         public static final int btnIntendV=0x7f0b0052;
         public static final int buttonCancel=0x7f0b0040;
         public static final int buttonCancelAll=0x7f0b0043;
-        public static final int buttonCurl=0x7f0b0047;
         public static final int buttonDelete=0x7f0b0041;
         public static final int buttonDownload=0x7f0b003d;
-        public static final int buttonDownloadMain=0x7f0b0044;
-        public static final int buttonInvokeVideo=0x7f0b0046;
         public static final int buttonLayout=0x7f0b003c;
         public static final int buttonPause=0x7f0b003e;
         public static final int buttonPauseAll=0x7f0b0042;
         public static final int buttonResume=0x7f0b003f;
         public static final int buttonUploadImage=0x7f0b004c;
-        public static final int buttonUploadMain=0x7f0b0045;
+        public static final int buttonUploadMain=0x7f0b0044;
         public static final int checkbox=0x7f0b002d;
         public static final int collapseActionView=0x7f0b0014;
         public static final int default_activity_button=0x7f0b0028;
@@ -893,6 +890,9 @@ containing a value of this type.
         public static final int showCustom=0x7f0b000b;
         public static final int showHome=0x7f0b000c;
         public static final int showTitle=0x7f0b000d;
+        public static final int simpleDescriptionView=0x7f0b0047;
+        public static final int simpleTextView=0x7f0b0045;
+        public static final int simpleTitleView=0x7f0b0046;
         public static final int split_action_bar=0x7f0b001e;
         public static final int submit_area=0x7f0b0039;
         public static final int tabMode=0x7f0b0008;
@@ -940,13 +940,14 @@ containing a value of this type.
         public static final int activity_download_selection=0x7f030019;
         public static final int activity_main=0x7f03001a;
         public static final int activity_test_curl=0x7f03001b;
-        public static final int activity_upload=0x7f03001c;
-        public static final int bucket_item=0x7f03001d;
-        public static final int fragment_blank=0x7f03001e;
-        public static final int fragment_test=0x7f03001f;
-        public static final int main=0x7f030020;
-        public static final int record_item=0x7f030021;
-        public static final int support_simple_spinner_dropdown_item=0x7f030022;
+        public static final int activity_title_description=0x7f03001c;
+        public static final int activity_upload=0x7f03001d;
+        public static final int bucket_item=0x7f03001e;
+        public static final int fragment_blank=0x7f03001f;
+        public static final int fragment_test=0x7f030020;
+        public static final int main=0x7f030021;
+        public static final int record_item=0x7f030022;
+        public static final int support_simple_spinner_dropdown_item=0x7f030023;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f050000;

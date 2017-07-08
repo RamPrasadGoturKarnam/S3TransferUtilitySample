@@ -13,9 +13,10 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-feature android:name="android.hardware.camera"
-        android:required="true" />
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -45,8 +46,10 @@
             android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
             android:enabled="true" />
 
-        <activity android:name=".TestCurlActivity"></activity>
-        <activity android:name=".PhotoIntentActivity"></activity>
+        <activity android:name=".TestCurlActivity" />
+        <activity android:screenOrientation="portrait" android:configChanges="locale|touchscreen|orientation|screenLayout|screenSize|keyboardHidden|uiMode" android:name=".PhotoIntentActivity" />
+
+        <activity android:name=".TitleDescriptionActivity"/>
     </application>
 
 </manifest>

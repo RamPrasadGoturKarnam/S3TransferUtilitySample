@@ -84,6 +84,10 @@
         "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/layout/abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/layout/activity_title_description.xml",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/layout/activity_title_description.xml"
+    },
+    {
         "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/layout/activity_download_selection.xml",
         "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/layout/activity_download_selection.xml"
     },

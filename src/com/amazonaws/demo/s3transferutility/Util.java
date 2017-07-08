@@ -16,6 +16,7 @@
 package com.amazonaws.demo.s3transferutility;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.net.Uri;
 
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
@@ -167,6 +168,7 @@ public class Util {
         String wikiparsedString = wikilink.substring(index+1,wikilink.length());
         return wikiparsedString;
     }
+
 
 
 

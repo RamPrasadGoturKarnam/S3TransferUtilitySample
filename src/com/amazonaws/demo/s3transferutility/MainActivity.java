@@ -21,7 +21,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import com.amazonaws.demo.s3transferutility.TestFragment;
+import com.amazonaws.demo.s3transferutility.YoutubeServiceFragment;
 
 /*
  * This is the beginning screen that lets the user select if they want to upload or download
@@ -41,19 +41,19 @@ public class MainActivity extends Activity {
     }
 
     private void initUI() {
-        btnDownload = (Button) findViewById(R.id.buttonDownloadMain);
+       // btnDownload = (Button) findViewById(R.id.buttonDownloadMain);
         btnUpload = (Button) findViewById(R.id.buttonUploadMain);
-        btnInvokeYoutube = (Button) findViewById(R.id.buttonInvokeVideo);
-        btnInvokeCurl = (Button) findViewById(R.id.buttonCurl);
+      //  btnInvokeYoutube = (Button) findViewById(R.id.buttonInvokeVideo);
+       // btnInvokeCurl = (Button) findViewById(R.id.buttonCurl);
 
 
-        btnDownload.setOnClickListener(new OnClickListener() {
+       /* btnDownload.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(MainActivity.this, DownloadActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         btnUpload.setOnClickListener(new OnClickListener() {
             @Override
@@ -63,7 +63,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        btnInvokeYoutube.setOnClickListener(new OnClickListener() {
+       /* btnInvokeYoutube.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(MainActivity.this, TestActivity.class);
@@ -77,7 +77,7 @@ public class MainActivity extends Activity {
                 Intent intent = new Intent(MainActivity.this, TestCurlActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
     }
 }

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 
-import com.amazonaws.demo.s3transferutility.TestFragment;
+import com.amazonaws.demo.s3transferutility.YoutubeServiceFragment;
 import com.amazonaws.demo.s3transferutility.Util;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferObserver;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferState;
@@ -36,7 +36,7 @@ public class TestCurlActivity extends Activity {
         // transferUtility = Util.getTransferUtility(this);
         // beginUpload();
         if (savedInstanceState == null) {
-            BlankFragment testFragment = new BlankFragment();
+            ImageParseFragment testFragment = new ImageParseFragment();
             getFragmentManager().beginTransaction().add(android.R.id.content, testFragment).commit();
         }
     }

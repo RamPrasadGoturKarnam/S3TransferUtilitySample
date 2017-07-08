@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="58b77c90b8d609854b2bd997914dd9735e0d3c2e">
+        sha1="a7f7d28f9c3af46aeed24bf7cab72e2df62bc401">
         <dex dex="/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a704be96219d958e07e0c42b1f3eab438189dddd/classes.dex" />
     </item>
     <item
