@@ -21,6 +21,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
+
 import com.amazonaws.demo.s3transferutility.YoutubeServiceFragment;
 
 /*
@@ -37,6 +39,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TextView tv=(TextView)findViewById(R.id.caption);
+        tv.setSelected(true);
         initUI();
     }
 

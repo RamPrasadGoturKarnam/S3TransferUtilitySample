@@ -2,20 +2,24 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="#ffe799">
 
     <LinearLayout
         android:id="@+id/pauseCancelAllLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/buttonPauseAll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="#ff0000"
+            android:textSize="15sp"
+            android:visibility="invisible"
             android:text="@string/pause_all" />
 
         <Button
@@ -23,6 +27,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="#ff0000"
+            android:textSize="15sp"
+            android:visibility="invisible"
             android:text="@string/cancel_all" />
     </LinearLayout>
 
@@ -38,6 +45,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="#ff0000"
+            android:textSize="15sp"
+            android:visibility="invisible"
             android:text="@string/pause" />
 
         <Button
@@ -45,6 +55,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="#ff0000"
+            android:textSize="15sp"
+            android:visibility="invisible"
             android:text="@string/resume" />
 
         <Button
@@ -52,6 +65,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="#ff0000"
+            android:textSize="15sp"
             android:text="@string/cancel" />
 
         <Button
@@ -59,6 +74,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="#ff0000"
+            android:textSize="15sp"
             android:text="@string/delete" />
     </LinearLayout>
 
@@ -66,22 +83,41 @@
         android:id="@+id/uploadDownloadLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/operationLayout"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:layout_above="@+id/operationLayout"
+        android:layout_alignParentLeft="true">
+
 
         <Button
             android:id="@+id/ClickPictureFromCamera"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Take a Picture" />
+            android:height="60dp"
+            android:drawableLeft="@drawable/camera"
+            android:drawablePadding="6dp"
+            android:gravity="left|center"
+            android:padding="6dp"
+            android:text="@string/btnclickPicture"
+            android:textColor="#ff0000"
+            style="?android:attr/borderlessButtonStyle"
+            android:textSize="10sp"/>
+            />
+
 
         <Button
             android:id="@+id/buttonUploadImage"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/upload_image" />
+            android:height="60dp"
+            android:drawableLeft="@drawable/upload"
+            android:drawablePadding="6dp"
+            android:gravity="left|center"
+            android:padding="6dp"
+            android:text="@string/upload_image"
+            android:textColor="#ff0000"
+            style="?android:attr/borderlessButtonStyle"
+            android:textSize="10sp"/>
     </LinearLayout>
 
     <ListView

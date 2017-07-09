@@ -148,12 +148,12 @@
         "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable-xxhdpi/abc_list_focused_holo.9.png"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable-xxhdpi/abc_ab_stacked_solid_dark_holo.9.png",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable-xxhdpi/abc_ab_stacked_solid_dark_holo.9.png"
-    },
-    {
         "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable-xxhdpi/abc_spinner_ab_pressed_holo_light.9.png",
         "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable-xxhdpi/abc_spinner_ab_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable-xxhdpi/abc_ab_stacked_solid_dark_holo.9.png",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable-xxhdpi/abc_ab_stacked_solid_dark_holo.9.png"
     },
     {
         "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable-xxhdpi/abc_ic_voice_search.png",

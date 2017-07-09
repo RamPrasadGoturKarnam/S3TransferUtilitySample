@@ -16,13 +16,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:clickable="false" />
+        android:clickable="false"
+        android:textColor="@color/darkorange"
+        android:textSize="14sp"
+        />
 
     <TextView
         android:id="@+id/textFileName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:textColor="#ff0000"
         android:layout_toRightOf="@id/radioButton1" />
 
     <ProgressBar
@@ -31,13 +35,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textFileName"
-        android:layout_toRightOf="@id/radioButton1" />
+        android:layout_toRightOf="@id/radioButton1"
+        />
 
     <TextView
         android:id="@+id/textBytes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/progressBar1"
+        android:textColor="#ff0000"
         android:layout_toRightOf="@id/radioButton1" />
 
     <TextView
@@ -45,6 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
+        android:textColor="#ff0000"
         android:layout_below="@id/progressBar1" />
 
     <TextView
@@ -52,6 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/textBytes"
+        android:textColor="#ff0000"
         android:layout_below="@id/textBytes" />
 
 </RelativeLayout>

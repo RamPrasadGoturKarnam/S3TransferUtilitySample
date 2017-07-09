@@ -10,7 +10,6 @@
         android:id="@+id/myTextView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/default_text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </ScrollView>

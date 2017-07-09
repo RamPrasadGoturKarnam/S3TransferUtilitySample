@@ -16,6 +16,7 @@ ADDED from /Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android
 uses-sdk
 ADDED from /Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:19.1.0] /Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/AndroidManifest.xml:18:5-42
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.1.7] /Users/ramprasadgoturkarnam/.android/build-cache/12f49312e7836b8ebbf15d59059a263b55c4dd19/output/AndroidManifest.xml:6:5-8:41
 	android:targetSdkVersion
 		ADDED from /Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/AndroidManifest.xml:9:9-38
 		INJECTED from /Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/AndroidManifest.xml

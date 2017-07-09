@@ -321,9 +321,11 @@ public class PhotoIntentActivity extends ListActivity {
 		new Button.OnClickListener() {
 		@Override
 		public void onClick(View v) {
-			dispatchTakePictureIntent(ACTION_TAKE_PHOTO_S);
+			//dispatchTakePictureIntent(ACTION_TAKE_PHOTO_S);
 		}
 	};
+
+
 
 	/*Button.OnClickListener mTakeVidOnClickListener =
 		new Button.OnClickListener() {
@@ -351,12 +353,17 @@ public class PhotoIntentActivity extends ListActivity {
 				MediaStore.ACTION_IMAGE_CAPTURE
 		);
 
-		Button picSBtn = (Button) findViewById(R.id.btnIntendS);
+		//Hiding the BigPicture Button
+		picBtn.setVisibility(View.INVISIBLE);
+
+		/*Button picSBtn = (Button) findViewById(R.id.btnIntendS);
 		setBtnListenerOrDisable( 
 				picSBtn, 
 				mTakePicSOnClickListener,
 				MediaStore.ACTION_IMAGE_CAPTURE
-		);
+		);*/
+
+		dispatchTakePictureIntent(ACTION_TAKE_PHOTO_S);
 
 		/*Button vidBtn = (Button) findViewById(R.id.btnIntendV);
 		setBtnListenerOrDisable( 

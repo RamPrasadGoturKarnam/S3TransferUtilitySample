@@ -1,13 +1,14 @@
 <resources>
 
-    <string name="app_name">S3TransferUtility</string>
+    <string name="caption">caption</string>
+    <string name="app_name">Imagelens</string>
     <string name="upload_activity">UploadActivity</string>
     <string name="download_activity">DownloadActivity</string>
     <string name="download_selection_activity">Select a file from the bucket</string>
     <string name="download">Download</string>
     <string name="manage_download">Manage downloads</string>
     <string name="upload">Upload</string>
-    <string name="manage_upload">Manage uploads</string>
+    <string name="Start">Start</string>
     <string name="upload_file">Upload a file</string>
     <string name="upload_image">Upload an image</string>
     <string name="pause">Pause</string>
@@ -26,7 +27,7 @@
     <string name="btnIntendV">Take Video</string>
     <string name="cannot">Cannot</string>
     <string name="album_name">CameraSample</string>
-    <string name="btnclickPicture">ClickPictureFromCamera</string>
+    <string name="btnclickPicture">Take a Picture</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
