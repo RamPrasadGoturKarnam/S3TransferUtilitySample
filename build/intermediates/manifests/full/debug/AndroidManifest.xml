@@ -38,9 +38,7 @@
         <activity
             android:name="com.amazonaws.demo.s3transferutility.DownloadSelectionActivity"
             android:label="@string/download_selection_activity" />
-        <activity
-            android:name="com.amazonaws.demo.s3transferutility.TestActivity"
-            android:label="TestActivity" />
+        <activity android:name="com.amazonaws.demo.s3transferutility.TestActivity" />
 
         <service
             android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"

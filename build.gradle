@@ -23,6 +23,8 @@ dependencies {
     compile 'com.android.support:support-v4:19.1.0'
     compile 'com.squareup.picasso:picasso:2.2.+'
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.+'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
 }
 
 android {

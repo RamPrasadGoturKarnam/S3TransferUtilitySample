@@ -1,6 +1,8 @@
 package com.amazonaws.demo.s3transferutility;
 
 import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -37,6 +39,9 @@ public class TestActivity extends Activity {
         if (savedInstanceState == null) {
             YoutubeServiceFragment testFragment = new YoutubeServiceFragment();
             getFragmentManager().beginTransaction().add(android.R.id.content, testFragment).commit();
+
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         }
     }
 

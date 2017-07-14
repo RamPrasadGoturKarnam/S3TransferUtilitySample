@@ -93,9 +93,7 @@ ADDED from /Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android
 	android:name
 		ADDED from /Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/AndroidManifest.xml:39:13-54
 activity#com.amazonaws.demo.s3transferutility.TestActivity
-ADDED from /Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/AndroidManifest.xml:41:9-43:44
-	android:label
-		ADDED from /Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/AndroidManifest.xml:43:13-41
+ADDED from /Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/AndroidManifest.xml:41:9-43:15
 	android:name
 		ADDED from /Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/AndroidManifest.xml:42:13-41
 service#com.amazonaws.mobileconnectors.s3.transferutility.TransferService

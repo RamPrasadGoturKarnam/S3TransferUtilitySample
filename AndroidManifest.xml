@@ -40,7 +40,7 @@
             android:label="@string/download_selection_activity" />
         <activity
             android:name=".TestActivity"
-            android:label="TestActivity" />
+            />
 
         <service
             android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"

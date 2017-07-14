@@ -53,7 +53,7 @@ public class RestTask extends AsyncTask<HttpUriRequest, Void, String>
            // beginUpload();
             //Invoking youtube service Logic
             HttpUriRequest request = params[0];
-            System.out.println("request.."+request.getURI().toString());
+            Log.i("request..--->",request.getURI().toString());
            HttpResponse serverResponse = mClient.execute(request);
 
             BasicResponseHandler handler = new BasicResponseHandler();

@@ -341,6 +341,7 @@ public class PhotoIntentActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
+
 		mImageView = (ImageView) findViewById(R.id.imageView1);
 		mVideoView = (VideoView) findViewById(R.id.videoView1);
 		mImageBitmap = null;
@@ -662,6 +663,7 @@ public class PhotoIntentActivity extends ListActivity {
 		ImageParseFragment testFragment = new ImageParseFragment();
 		testFragment.setArguments(bundle);
 		getFragmentManager().beginTransaction().add(android.R.id.content, testFragment).commit();
+		setContentView(R.layout.activity_upload);
 	}
 
 

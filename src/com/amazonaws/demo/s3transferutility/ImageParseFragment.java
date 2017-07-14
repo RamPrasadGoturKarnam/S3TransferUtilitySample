@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.amazonaws.http.HttpResponse;
+import com.amazonaws.util.StringUtils;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.gson.Gson;
@@ -61,6 +62,7 @@ public class ImageParseFragment extends Fragment {
     private static final String S3_URL                   = "{\"image_url\":\"https://s3.amazonaws.com/imageslens/";
     String S3_END_URL = "}";
     private static final String ACTION_FOR_INTENT_CALLBACK = "THIS_IS_A_UNIQUE_KEY_WE_USE_TO_COMMUNICATE";
+    private static final String ACTION_FOR_INTENT_CALLBACK_1 = "THIS_IS_A_UNIQUE_KEY_WE_USE_TO_COMMUNICATE_1";
 
     ProgressDialog progress;
     private TextView ourTextView;
@@ -92,20 +94,19 @@ public class ImageParseFragment extends Fragment {
 
           String imagename= this.getArguments().getString("imagename");
             Log.i("imagenameS3",imagename);
-           // String imagescannerserviceURL = S3_URL+"deepika-padukone.jpg";
-           // Log.i("imagescannerserviceURL",imagescannerserviceURL);
-            //String imagename = "Raghu.jpeg";
-            HttpPost httpPost = new HttpPost(new URI(TEST_URL));
-           // String data =  "{\"image_url\":\"https://s3.amazonaws.com/imageslens/images/mickey-mouse-clubhouse-disney.jpg\"}";
-            //String data1 =  "{\"image_url\":\"https://s3.amazonaws.com/imageslens/IMG_20170628_204710.jpg\"}";
-            //Log.i("Service URL ",data1);
-            String data =  S3_URL+imagename+"\"}";
+
+           /* HttpPost httpPost = new HttpPost(new URI(TEST_URL));
+            String data =  S3_URL+imagename+"\"}";*/
+            HttpPost httpPost = new HttpPost(new URI(Constants.REST_SERVICE_URI+imagename));
+           /* String data =  imagename;
+
             Log.i("Service URL ",data);
             HttpEntity entity = new ByteArrayEntity(data.getBytes("UTF-8"));
-            httpPost.setEntity(entity);
+
+            httpPost.setEntity(entity);*/
             httpPost.setHeader("Accept", "application/json");
             httpPost.setHeader("Content-type", "application/json");
-           RestTask task = new RestTask(getActivity(), ACTION_FOR_INTENT_CALLBACK);
+           RestTask task = new RestTask(getActivity(), ACTION_FOR_INTENT_CALLBACK_1);
            // HttpClient mClient = new DefaultHttpClient();
             task.execute(httpPost);
           //  org.apache.http.HttpResponse response = mClient.execute(httpPost);
@@ -123,7 +124,7 @@ public class ImageParseFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        getActivity().registerReceiver(receiver, new IntentFilter(ACTION_FOR_INTENT_CALLBACK));
+        getActivity().registerReceiver(receiver, new IntentFilter(ACTION_FOR_INTENT_CALLBACK_1));
     }
 
     @Override
@@ -139,6 +140,7 @@ public class ImageParseFragment extends Fragment {
     private BroadcastReceiver receiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
+            Log.i(TAG, "onReceive entered");
             // clear the progress indicator
             if (progress != null) {
                 progress.dismiss();
@@ -159,25 +161,63 @@ public class ImageParseFragment extends Fragment {
             List<String> amazonuklinklist = videoLinkMap.get(Constants.AMAZON_UK);
             List<String> gettyimageslist = videoLinkMap.get(Constants.GETTY_IMAGES);
             List<String> generallinklist = videoLinkMap.get(Constants.GENERIC_LINK);
+            List<String> bestguesslist = videoLinkMap.get(Constants.IMAGEBESTGUESS);
+            System.out.println("bestguesslist-->"+bestguesslist);
 
-            System.out.println("wikipedialinklist-->"+wikipedialinklist);
+            if(CollectionUtils.isNotEmpty(bestguesslist)) {
+                String videoServiceInputString = bestguesslist.get(0);
+                Log.i(TAG, "videoServiceInputString with BestGuess = " + videoServiceInputString);
+
+                //Call Fragment
+                Bundle bundle = new Bundle();
+                bundle.putString("videoname",videoServiceInputString);
+
+                YoutubeServiceFragment  youtubeFragment = new YoutubeServiceFragment();
+                youtubeFragment.setArguments(bundle);
+                getFragmentManager().beginTransaction().add(android.R.id.content, youtubeFragment).commit();
+
+                //End
+               /* Intent youtubeserviceintent = new Intent(getActivity(), TestActivity.class);
+                youtubeserviceintent.putExtra("videoname",videoServiceInputString);
+                startActivity(youtubeserviceintent);*/
+            }else
             if(CollectionUtils.isNotEmpty(youtubelinklist)) {
                 Intent intent1 = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubelinklist.get(0)));
                 startActivity(intent1);
             } else
             if(CollectionUtils.isNotEmpty(wikipedialinklist)) {
                 String videoServiceInputString = Util.parseWikipedia(wikipedialinklist);
-                Log.i(TAG, "videoServiceInputString = " + videoServiceInputString);
-                Intent youtubeserviceintent = new Intent(getActivity(), TestActivity.class);
+                Log.i(TAG, "videoServiceInputString wiki = " + videoServiceInputString);
+
+                //Call Fragment
+                Bundle bundle = new Bundle();
+                bundle.putString("videoname",videoServiceInputString);
+
+                YoutubeServiceFragment  youtubeFragment = new YoutubeServiceFragment();
+                youtubeFragment.setArguments(bundle);
+                getFragmentManager().beginTransaction().add(android.R.id.content, youtubeFragment).commit();
+
+                //End
+                /*Intent youtubeserviceintent = new Intent(getActivity(), TestActivity.class);
                 youtubeserviceintent.putExtra("videoname",videoServiceInputString);
-                startActivity(youtubeserviceintent);
+                startActivity(youtubeserviceintent);*/
             } else
             if(CollectionUtils.isNotEmpty(gettyimageslist)) {
                 String videoServiceInputString = Util.parseWikipedia(gettyimageslist);
-                Log.i(TAG, "videoServiceInputString = " + videoServiceInputString);
-                Intent youtubeserviceintent = new Intent(getActivity(), TestActivity.class);
+                Log.i(TAG, "videoServiceInputString getty = " + videoServiceInputString);
+
+                //Call Fragment
+                Bundle bundle = new Bundle();
+                bundle.putString("videoname",videoServiceInputString);
+
+                YoutubeServiceFragment  youtubeFragment = new YoutubeServiceFragment();
+                youtubeFragment.setArguments(bundle);
+                getFragmentManager().beginTransaction().add(android.R.id.content, youtubeFragment).commit();
+
+                //End
+               /*Intent youtubeserviceintent = new Intent(getActivity(), TestActivity.class);
                 youtubeserviceintent.putExtra("videoname",videoServiceInputString);
-                startActivity(youtubeserviceintent);
+                startActivity(youtubeserviceintent);*/
             }else if(CollectionUtils.isNotEmpty(vimeolinklist)) {
                 String url = vimeolinklist.get(0);
                 Intent i = new Intent(Intent.ACTION_VIEW);
@@ -338,8 +378,8 @@ return null;
         Gson g = new Gson();
         MrisaJSON p = g.fromJson(curlOutput, MrisaJSON.class);
         /*System.out.println("Links---->" + p.getLinks());
-        System.out.println("titles---->" + p.getLinks());
-        System.out.println("Description---->" + p.getDescriptions());*/
+        System.out.println("titles---->" + p.getLinks());*/
+       // System.out.println("BestGuess---->" + p.getImagebestguess());
 
         Pattern patternWikipedia = Pattern.compile(Constants.WIKIPEDIA_PATTERN, Pattern.CASE_INSENSITIVE); //incase u r not concerned about upper/lower case
         Pattern patternYoutube = Pattern.compile(Constants.YOUTUBE_PATTERN, Pattern.CASE_INSENSITIVE); //incase u r not concerned about upper/lower case
@@ -406,6 +446,10 @@ return null;
 
         if(CollectionUtils.isNotEmpty(p.getDescriptions())){
             videolinksMap.put(Constants.DESCRIPTION, p.getDescriptions());
+        }
+
+        if(!com.google.common.base.Strings.isNullOrEmpty(p.getImagebestguess())){
+            videolinksMap.put(Constants.IMAGEBESTGUESS, Lists.newArrayList(p.getImagebestguess()));
         }
 
 

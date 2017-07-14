@@ -7,6 +7,14 @@ public class MrisaJSON {
 	private List<String> links;
 	private List<String> similar_images;
 	private List<String> titles;
+	private String imagebestguess;
+
+	public String getImagebestguess() {
+		return imagebestguess;
+	}
+	public void setImagebestguess(String imagebestguess) {
+		this.imagebestguess = imagebestguess;
+	}
 	
 	public List<String> getDescriptions() {
 		return descriptions;

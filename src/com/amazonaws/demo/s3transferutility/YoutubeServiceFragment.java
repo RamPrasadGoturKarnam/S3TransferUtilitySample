@@ -21,6 +21,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.http.client.methods.HttpGet;
 
 import java.io.BufferedReader;
@@ -28,6 +29,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URI;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -59,16 +61,23 @@ public class YoutubeServiceFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        ourTextView = (TextView)getActivity().findViewById(R.id.myTextView);
+       // ourTextView = (TextView)getActivity().findViewById(R.id.myTextView);
         getContent();
     }
 
     private void getContent() {
         // the request
         try {
-            TestActivity activity = (TestActivity) getActivity();
-            String videoname= activity.getIntent().getExtras().getString("videoname");
-            String youtubeserviceURL = TEST_URL+videoname;
+
+            String videoname= this.getArguments().getString("videoname");
+            Log.i("videoname",videoname);
+
+
+          /* TestActivity activity = (TestActivity) getActivity();
+            String videoname= activity.getIntent().getExtras().getString("videoname");*/
+            String imagename = URLEncoder.encode(videoname, "UTF-8");
+
+            String youtubeserviceURL=TEST_URL+imagename;
             Log.i("youtubeserviceURL",youtubeserviceURL);
             HttpGet httpGet = new HttpGet(new URI(youtubeserviceURL));
             RestTask task = new RestTask(getActivity(), ACTION_FOR_INTENT_CALLBACK);
@@ -108,15 +117,19 @@ public class YoutubeServiceFragment extends Fragment {
             }
             String response = intent.getStringExtra(RestTask.HTTP_RESPONSE);
             //ourTextView.setText(response);
-            Log.i(TAG, "RESPONSE = " + response);
-            List<String> items = Arrays.asList(response.split(","));
-            /*Gson gson = new Gson();
-            JsonElement element = gson.fromJson (response, JsonElement.class);
-            JsonObject jsonObj = element.getAsJsonObject();
-            String[] arraylink = jsonObj.toString().split(",");*/
+            Log.i(TAG, "---Youtube RESPONSE = ");
+            Gson g = new Gson();
+            YoutubeJSON youtubejson = g.fromJson(response, YoutubeJSON.class);
+            //List<String> items = Arrays.asList(response.split(","));
+            List<String> links = Arrays.asList(youtubejson.getYoutubelink());
 
-            String youtubelink = items.get(1).replace("\"", "");
-            Log.i("Youtubelink",youtubelink);
+            String youtubelink = "";
+           // String youtubelink = items.get(1).replace("\"", "");
+            if(CollectionUtils.isNotEmpty(links)){
+                youtubelink = links.get(0);
+            }
+
+            Log.i("--Youtubelink----",youtubelink);
             Intent intent1 = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubelink));
             startActivity(intent1);
             //
@@ -124,6 +137,35 @@ public class YoutubeServiceFragment extends Fragment {
             //
         }
     };
+
+    /*public void recieveAsyncResponse(Intent intent){
+
+        // clear the progress indicator
+        if (progress != null) {
+            progress.dismiss();
+        }
+        String response = intent.getStringExtra(RestTask.HTTP_RESPONSE);
+        //ourTextView.setText(response);
+        Log.i(TAG, "---Youtube RESPONSE = ");
+        Gson g = new Gson();
+        YoutubeJSON youtubejson = g.fromJson(response, YoutubeJSON.class);
+        //List<String> items = Arrays.asList(response.split(","));
+        List<String> links = Arrays.asList(youtubejson.getYoutubelink());
+
+        String youtubelink = "";
+        // String youtubelink = items.get(1).replace("\"", "");
+        if(CollectionUtils.isNotEmpty(links)){
+            youtubelink = links.get(0);
+        }
+
+        Log.i("--Youtubelink----",youtubelink);
+        Intent intent1 = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubelink));
+        startActivity(intent1);
+        //
+        // my old json code was here. this is where you would parse it.
+        //
+
+    }*/
 
     private static ArrayList convertStreamToList(InputStream is) {
 

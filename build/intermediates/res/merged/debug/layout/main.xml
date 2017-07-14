@@ -3,6 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme = "@android:style/Theme.NoDisplay"
     android:background="#F0FFFF">
    <LinearLayout 
    android:orientation="horizontal"
@@ -16,6 +17,7 @@
         android:drawableLeft="@drawable/duck100"
         android:drawablePadding="6dp"
         android:gravity="left|center"
+        android:visibility="invisible"
         android:padding="6dp"
         android:textColor="#ff0000"
         />
@@ -26,6 +28,7 @@
         android:drawableLeft="@drawable/duck50"
         android:drawablePadding="6dp"
         android:gravity="left|center"
+        android:visibility="invisible"
         android:padding="6dp"
         android:textColor="#ff0000"
         />

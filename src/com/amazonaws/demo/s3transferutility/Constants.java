@@ -52,8 +52,11 @@ public class Constants {
     public static final String DAILY_MOTION = "dailymotion";
     public static final String TITLE = "title";
     public static final String DESCRIPTION = "description";
+    public static final String IMAGEBESTGUESS = "imagebestguess";
     public static final String GENERIC_LINK = "genericlink";
     public static final String GETTY_IMAGES = "gettyimages";
+    public static final String REST_SERVICE_URI = "http://54.236.214.104:8082/SpringBootRestApi/api/image?imagename=";
+
 
 
     public static final String YOUTUBE_PATTERN = "https://www.youtube.com/watch";

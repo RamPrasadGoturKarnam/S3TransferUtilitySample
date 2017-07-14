@@ -7,13 +7,21 @@ import java.util.List;
  */
 
 public class YoutubeJSON {
-    public List<String> getYoutubeserviceresponse() {
-        return youtubeserviceresponse;
+    private String[] youtubelink;
+
+    public String[] getYoutubelink ()
+    {
+        return youtubelink;
     }
 
-    public void setYoutubeserviceresponse(List<String> youtubeserviceresponse) {
-        this.youtubeserviceresponse = youtubeserviceresponse;
+    public void setYoutubelink (String[] youtubelink)
+    {
+        this.youtubelink = youtubelink;
     }
 
-    private List<String> youtubeserviceresponse;
+    @Override
+    public String toString()
+    {
+        return "ClassPojo [youtubelink = "+youtubelink+"]";
+    }
 }
