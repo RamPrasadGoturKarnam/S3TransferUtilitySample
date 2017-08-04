@@ -11,13 +11,13 @@
                     "endOffset": 112
                 },
                 "from": {
-                    "file": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/values-w480dp/values.xml",
+                    "file": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/values-w480dp-v13/values-w480dp-v13.xml",
                     "position": {
-                        "startLine": 6,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 280,
+                        "startOffset": 55,
                         "endColumn": 61,
-                        "endOffset": 337
+                        "endOffset": 112
                     }
                 }
             },
@@ -30,32 +30,13 @@
                     "endOffset": 184
                 },
                 "from": {
-                    "file": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/values-w480dp/values.xml",
+                    "file": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/values-w480dp-v13/values-w480dp-v13.xml",
                     "position": {
-                        "startLine": 10,
+                        "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 567,
+                        "startOffset": 117,
                         "endColumn": 71,
-                        "endOffset": 634
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 4,
-                    "startColumn": 4,
-                    "startOffset": 189,
-                    "endColumn": 60,
-                    "endOffset": 245
-                },
-                "from": {
-                    "file": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/values-w480dp/values.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 863,
-                        "endColumn": 60,
-                        "endOffset": 919
+                        "endOffset": 184
                     }
                 }
             }

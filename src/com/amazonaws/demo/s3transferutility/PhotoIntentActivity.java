@@ -98,6 +98,16 @@ public class PhotoIntentActivity extends ListActivity {
 
 
 
+	private String bitmappath;
+
+	public String getBitmappath() {
+		return bitmappath;
+	}
+
+	public void setBitmappath(String bitmappath) {
+		this.bitmappath = bitmappath;
+	}
+
 	/* Photo album for this application */
 	private String getAlbumName() {
 		return getString(R.string.album_name);
@@ -276,7 +286,7 @@ public class PhotoIntentActivity extends ListActivity {
 		mImageBitmap = (Bitmap) extras.get("data");
 		mImageView.setImageBitmap(mImageBitmap);
 		mVideoUri = null;
-		mImageView.setVisibility(View.VISIBLE);
+		mImageView.setVisibility(View.INVISIBLE);
 		mVideoView.setVisibility(View.INVISIBLE);
 
 		// CALL THIS METHOD TO GET THE URI FROM THE BITMAP
@@ -721,10 +731,10 @@ public class PhotoIntentActivity extends ListActivity {
 		 */
 		simpleAdapter = new SimpleAdapter(this, transferRecordMaps,
 				R.layout.record_item, new String[] {
-				"checked", "fileName", "progress", "bytes", "state", "percentage"
+				"checked", "fileName","thumbnail", "progress", "bytes", "state", "percentage"
 		},
 				new int[] {
-						R.id.radioButton1, R.id.textFileName, R.id.progressBar1, R.id.textBytes,
+						R.id.radioButton1, R.id.textFileName,R.id.thumbnail, R.id.progressBar1, R.id.textBytes,
 						R.id.textState, R.id.textPercentage
 				});
 		simpleAdapter.setViewBinder(new SimpleAdapter.ViewBinder() {
@@ -738,7 +748,16 @@ public class PhotoIntentActivity extends ListActivity {
 						return true;
 					case R.id.textFileName:
 						TextView fileName = (TextView) view;
-						fileName.setText((String) data);
+						// fileName.setText((String) data);
+						System.out.println("Textview-->"+(data));
+						setBitmappath((String) data);
+						return true;
+					case R.id.thumbnail:
+						System.out.println("Data-->"+getBitmappath());
+						// Uri uri = Uri.fromFile(new File("/storage/sdcard/Pictures/CameraSample/IMG_20170701_190206_-1955301407.jpg"));
+
+						ImageView thumbnail1 = (ImageView) view;
+						thumbnail1.setImageBitmap(ThumbnailUtils.createImageThumbnail(getBitmappath(),3));
 						return true;
 					case R.id.progressBar1:
 						ProgressBar progress = (ProgressBar) view;

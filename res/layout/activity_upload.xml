@@ -127,8 +127,8 @@
         android:layout_above="@id/uploadDownloadLayout"
         android:layout_alignParentTop="true"
         android:cacheColorHint="#00000000"
-        android:divider="#808080"
-        android:dividerHeight="1dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
         android:transcriptMode="normal" />
 
 </RelativeLayout>

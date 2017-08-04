@@ -17,6 +17,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.amazonaws.demo.s3transferutility.cardview.Album;
+import com.amazonaws.demo.s3transferutility.cardview.CardViewMainActivity;
 import com.amazonaws.http.HttpResponse;
 import com.amazonaws.util.StringUtils;
 import com.google.common.collect.Lists;
@@ -36,6 +38,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.io.Serializable;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URL;
@@ -66,8 +69,15 @@ public class ImageParseFragment extends Fragment {
 
     ProgressDialog progress;
     private TextView ourTextView;
+    private String imageName;
 
+    public String getImageName() {
+        return imageName;
+    }
 
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -94,6 +104,7 @@ public class ImageParseFragment extends Fragment {
 
           String imagename= this.getArguments().getString("imagename");
             Log.i("imagenameS3",imagename);
+            setImageName(imagename);
 
            /* HttpPost httpPost = new HttpPost(new URI(TEST_URL));
             String data =  S3_URL+imagename+"\"}";*/
@@ -147,126 +158,240 @@ public class ImageParseFragment extends Fragment {
             }
             String response = intent.getStringExtra(RestTask.HTTP_RESPONSE);
             Log.i(TAG, "RESPONSE = " + response);
-           // ourTextView.setText(response);
 
-            Map<String, List> videoLinkMap = ConvertString2Json(response);
-            List<String> youtubelinklist = videoLinkMap.get(Constants.YOUTUBE);
-            List<String> wikipedialinklist = videoLinkMap.get(Constants.WIKIPEDIA);
-            List<String> vimeolinklist = videoLinkMap.get(Constants.VIMEO);
-            List<String> daiymotionlinklist = videoLinkMap.get(Constants.DAILY_MOTION);
-            List<String> linkedinlist = videoLinkMap.get(Constants.LINKEDIN);
-            List<String> titlelist = videoLinkMap.get(Constants.TITLE);
-            List<String> descriptionlist = videoLinkMap.get(Constants.DESCRIPTION);
-            List<String> amazonlinklist = videoLinkMap.get(Constants.AMAZON);
-            List<String> amazonuklinklist = videoLinkMap.get(Constants.AMAZON_UK);
-            List<String> gettyimageslist = videoLinkMap.get(Constants.GETTY_IMAGES);
-            List<String> generallinklist = videoLinkMap.get(Constants.GENERIC_LINK);
-            List<String> bestguesslist = videoLinkMap.get(Constants.IMAGEBESTGUESS);
-            System.out.println("bestguesslist-->"+bestguesslist);
+            Map<String, List> videolinkMap = frameVideolinks(response);
+           /* YoutubeServiceFragment youtubeFragment = new YoutubeServiceFragment();
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("hashmap", (Serializable) videolinkMap);
 
-            if(CollectionUtils.isNotEmpty(bestguesslist)) {
-                String videoServiceInputString = bestguesslist.get(0);
-                Log.i(TAG, "videoServiceInputString with BestGuess = " + videoServiceInputString);
+            youtubeFragment.setArguments(bundle);
 
-                //Call Fragment
-                Bundle bundle = new Bundle();
-                bundle.putString("videoname",videoServiceInputString);
+            getFragmentManager().beginTransaction().add(android.R.id.content, youtubeFragment).commit();*/
 
-                YoutubeServiceFragment  youtubeFragment = new YoutubeServiceFragment();
-                youtubeFragment.setArguments(bundle);
-                getFragmentManager().beginTransaction().add(android.R.id.content, youtubeFragment).commit();
+            // mMaplinks.put("youtubelink",youtubelink);
+            Intent intent1 = new Intent(getActivity(),CardViewMainActivity.class);
 
-                //End
-               /* Intent youtubeserviceintent = new Intent(getActivity(), TestActivity.class);
-                youtubeserviceintent.putExtra("videoname",videoServiceInputString);
-                startActivity(youtubeserviceintent);*/
-            }else
-            if(CollectionUtils.isNotEmpty(youtubelinklist)) {
-                Intent intent1 = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubelinklist.get(0)));
-                startActivity(intent1);
-            } else
-            if(CollectionUtils.isNotEmpty(wikipedialinklist)) {
-                String videoServiceInputString = Util.parseWikipedia(wikipedialinklist);
-                Log.i(TAG, "videoServiceInputString wiki = " + videoServiceInputString);
-
-                //Call Fragment
-                Bundle bundle = new Bundle();
-                bundle.putString("videoname",videoServiceInputString);
-
-                YoutubeServiceFragment  youtubeFragment = new YoutubeServiceFragment();
-                youtubeFragment.setArguments(bundle);
-                getFragmentManager().beginTransaction().add(android.R.id.content, youtubeFragment).commit();
-
-                //End
-                /*Intent youtubeserviceintent = new Intent(getActivity(), TestActivity.class);
-                youtubeserviceintent.putExtra("videoname",videoServiceInputString);
-                startActivity(youtubeserviceintent);*/
-            } else
-            if(CollectionUtils.isNotEmpty(gettyimageslist)) {
-                String videoServiceInputString = Util.parseWikipedia(gettyimageslist);
-                Log.i(TAG, "videoServiceInputString getty = " + videoServiceInputString);
-
-                //Call Fragment
-                Bundle bundle = new Bundle();
-                bundle.putString("videoname",videoServiceInputString);
-
-                YoutubeServiceFragment  youtubeFragment = new YoutubeServiceFragment();
-                youtubeFragment.setArguments(bundle);
-                getFragmentManager().beginTransaction().add(android.R.id.content, youtubeFragment).commit();
-
-                //End
-               /*Intent youtubeserviceintent = new Intent(getActivity(), TestActivity.class);
-                youtubeserviceintent.putExtra("videoname",videoServiceInputString);
-                startActivity(youtubeserviceintent);*/
-            }else if(CollectionUtils.isNotEmpty(vimeolinklist)) {
-                String url = vimeolinklist.get(0);
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
-            }else if(CollectionUtils.isNotEmpty(daiymotionlinklist)) {
-                String url = daiymotionlinklist.get(0);
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
-            }else if(CollectionUtils.isNotEmpty(generallinklist)) {
-                String url = generallinklist.get(0);
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
-            }else if(CollectionUtils.isNotEmpty(amazonuklinklist)) {
-                String url = amazonuklinklist.get(0);
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
-            }else if(CollectionUtils.isNotEmpty(linkedinlist)) {
-                String url = linkedinlist.get(0);
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
-            }else if(CollectionUtils.isNotEmpty(linkedinlist)) {
-                String url = linkedinlist.get(0);
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
-            }else if(CollectionUtils.isNotEmpty(titlelist)||CollectionUtils.isNotEmpty(descriptionlist)) {
-                String title = titlelist.get(0);
-                String description = descriptionlist.get(0);
-                Log.d("title->",title);
-                Log.d("description->",description);
-                Intent titledescriptionserviceintent = new Intent(getActivity(), TitleDescriptionActivity.class);
-                titledescriptionserviceintent.putExtra("title",title);
-                titledescriptionserviceintent.putExtra("description",description);
-                startActivity(titledescriptionserviceintent);
-            }else if(CollectionUtils.isEmpty(titlelist)||CollectionUtils.isEmpty(descriptionlist)) {
-                Intent titledescriptionserviceintent = new Intent(getActivity(), TitleDescriptionActivity.class);
-                titledescriptionserviceintent.putExtra("title","");
-                titledescriptionserviceintent.putExtra("description","");
-                startActivity(titledescriptionserviceintent);
-            }
+            intent1.putExtra("imagelinks",(Serializable)videolinkMap);
+            startActivity(intent1);
 
 
         }
     };
+
+
+
+    private Map<String,List> frameVideolinks(String response){
+
+       /* int[] covers = new int[]{
+                "",
+                getResources().getIdentifier("R.drawable.album2", null, "com.amazonaws.demo.s3transferutility"),
+                R.drawable.album3,
+                R.drawable.wikipedia,
+                R.drawable.album5,
+                R.drawable.dailymotion,
+                R.drawable.album7,
+                R.drawable.album8,
+                R.drawable.album9,
+                R.drawable.album10,
+                R.drawable.album11};*/
+
+       String[] covers = new String[]{
+               "https://s3.amazonaws.com/imageslens/images/youtubeicon3.png",
+               "http://4.bp.blogspot.com/-lWM-u_6PCPU/VN4eatUfY_I/AAAAAAAAED4/PgKq_6wugQY/s1600/Pursuit%2Bof%2Bhappiness%2B2.png",
+               "https://s3.amazonaws.com/imageslens/images/wikipedia.jpg",
+               "https://s3.amazonaws.com/imageslens/images/if_dailymotion_11008.png",
+               "https://s3.amazonaws.com/imageslens/images/vimeoresize.png",
+               "https://s3.amazonaws.com/imageslens/images/if_dailymotion_11008.png",
+               "https://s3.amazonaws.com/imageslens/images/if_dailymotion_11008.png",
+               "https://s3.amazonaws.com/imageslens/images/linkedin.png",
+               "https://s3.amazonaws.com/imageslens/images/if_dailymotion_11008.png",
+               "https://s3.amazonaws.com/imageslens/images/if_dailymotion_11008.png",
+               "https://s3.amazonaws.com/imageslens/images/if_dailymotion_11008.png"
+       };
+
+
+        ArrayList albumList = Lists.newArrayList();
+
+        Map<String, List> videoLinkMap = ConvertString2Json(response);
+        List<String> youtubelinklist = videoLinkMap.get(Constants.YOUTUBE);
+        List<String> wikipedialinklist = videoLinkMap.get(Constants.WIKIPEDIA);
+        List<String> vimeolinklist = videoLinkMap.get(Constants.VIMEO);
+        List<String> daiymotionlinklist = videoLinkMap.get(Constants.DAILY_MOTION);
+        List<String> linkedinlist = videoLinkMap.get(Constants.LINKEDIN);
+        List<String> titlelist = videoLinkMap.get(Constants.TITLE);
+        List<String> descriptionlist = videoLinkMap.get(Constants.DESCRIPTION);
+        List<String> amazonlinklist = videoLinkMap.get(Constants.AMAZON);
+        List<String> amazonuklinklist = videoLinkMap.get(Constants.AMAZON_UK);
+        List<String> gettyimageslist = videoLinkMap.get(Constants.GETTY_IMAGES);
+        List<String> generallinklist = videoLinkMap.get(Constants.GENERIC_LINK);
+        List<String> bestguesslist = videoLinkMap.get(Constants.IMAGEBESTGUESS);
+        List<String> kapinamelist = videoLinkMap.get(Constants.KPI_NAME);
+        List<String> kapidescriptionlist = videoLinkMap.get(Constants.KPI_DESCRIPTION);
+        List<String> similarimageslist = videoLinkMap.get(Constants.SIMILAR_IMAGES);
+        System.out.println("bestguesslist-->"+bestguesslist);
+
+        Map<String,List> linksMap = Maps.newHashMap();
+
+
+
+        if(CollectionUtils.isNotEmpty(youtubelinklist)) {
+               /* Intent intent1 = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubelinklist.get(0)));
+                startActivity(intent1);*/
+            // int imageResource = R.drawable.icon;
+            String bestguess = "";
+            if(CollectionUtils.isNotEmpty(bestguesslist)){
+                bestguess = bestguesslist.get(0);
+            }
+
+           Album a = new Album("Click here for latest videos in Youtube of "+bestguess, 8, covers[0], youtubelinklist.get(0));
+            albumList.add(a);
+            //linksMap.put("youtubelink",youtubelinklist.get(0));
+        } //else
+       /* if(CollectionUtils.isNotEmpty(bestguesslist)) {
+            String bestGuessString = bestguesslist.get(0);
+            Log.i(TAG, "videoServiceInputString with BestGuess = " + bestGuessString);
+            Album a1 = new Album("KabhiNahi", 8, covers[1],"https://www.youtube.com/watch?v=qC977wZ2w4Q");
+            albumList.add(a1);
+
+
+        }*///else
+        if(CollectionUtils.isNotEmpty(wikipedialinklist)) {
+           // String wikilink = Util.parseWikipedia(wikipedialinklist);
+            String wikilink = wikipedialinklist.get(0);
+                    Log.i(TAG, "videoServiceInputString wiki = " + wikilink);
+
+            Album a2 = new Album("Click here for details in WikiPedia ", 12, covers[2], wikilink);
+            albumList.add(a2);
+
+            //linksMap.put("wikipedialink",wikilink);
+            //Call Fragment
+               /* Bundle bundle = new Bundle();
+                bundle.putString("videoname",videoServiceInputString);
+
+                YoutubeServiceFragment  youtubeFragment = new YoutubeServiceFragment();
+                youtubeFragment.setArguments(bundle);
+                getFragmentManager().beginTransaction().add(android.R.id.content, youtubeFragment).commit();*/
+
+            //End
+                /*Intent youtubeserviceintent = new Intent(getActivity(), TestActivity.class);
+                youtubeserviceintent.putExtra("videoname",videoServiceInputString);
+                startActivity(youtubeserviceintent);*/
+        }// else
+        if(CollectionUtils.isNotEmpty(gettyimageslist)) {
+            //String gettyImageInputString = Util.parseWikipedia(gettyimageslist);
+            String gettyImageInputString = gettyimageslist.get(0);
+                    Log.i(TAG, "videoServiceInputString getty = " + gettyImageInputString);
+
+            Album a3 = new Album("Maroon 5", 11, covers[4], gettyImageInputString);
+            albumList.add(a3);
+           // linksMap.put("gettyImagelink",gettyImageInputString);
+
+            //Call Fragment
+              /*  Bundle bundle = new Bundle();
+                bundle.putString("videoname",videoServiceInputString);
+
+                YoutubeServiceFragment  youtubeFragment = new YoutubeServiceFragment();
+                youtubeFragment.setArguments(bundle);
+                getFragmentManager().beginTransaction().add(android.R.id.content, youtubeFragment).commit();*/
+
+            //End
+               /*Intent youtubeserviceintent = new Intent(getActivity(), TestActivity.class);
+                youtubeserviceintent.putExtra("videoname",videoServiceInputString);
+                startActivity(youtubeserviceintent);*/
+        }//else
+        if(CollectionUtils.isNotEmpty(vimeolinklist)) {
+            String vimeourl = vimeolinklist.get(0);
+
+            Album a4 = new Album("Click here for Videos in Vimeo ", 14, covers[4], vimeourl);
+            albumList.add(a4);
+           // linksMap.put("vimeolink",vimeourl);
+                /*Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);*/
+        }//else
+        if(CollectionUtils.isNotEmpty(daiymotionlinklist)) {
+            String dailymotionlinkurl = daiymotionlinklist.get(0);
+                /*Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);*/
+
+            Album a5 = new Album("I Need a Doctor", 1, covers[3], dailymotionlinkurl);
+            albumList.add(a5);
+           // linksMap.put("dailymotionlink",dailymotionlinkurl);
+
+        }//else
+        if(CollectionUtils.isNotEmpty(generallinklist)) {
+
+
+            String generalurllink = generallinklist.get(0);
+            Album a6 = new Album("Click here for General Links ", 11, "https://s3.amazonaws.com/imageslens/"+getImageName(), generalurllink);
+            albumList.add(a6);
+            //linksMap.put("generallink",generalurl);
+        }//else
+        if(CollectionUtils.isNotEmpty(amazonuklinklist)) {
+            String amazonuklinkurl = amazonuklinklist.get(0);
+                /*Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);*/
+
+            //linksMap.put("amazonuklink",amazonuklinkurl);
+        }//else
+
+        if(CollectionUtils.isNotEmpty(linkedinlist)) {
+            String linkedinurl = linkedinlist.get(0);
+            Album a6 = new Album("Click here for LinkedIn Links ", 11, covers[7], linkedinurl);
+            albumList.add(a6);
+        }//else
+
+        if(CollectionUtils.isNotEmpty(similarimageslist)) {
+            if(similarimageslist.size()>=1) {
+
+                String similarImage = similarimageslist.get(0);
+                String similarImagelink = similarimageslist.get(1);
+
+                Log.d("similarImage->", similarImage);
+                Album a8 = new Album("SIMILAR IMAGES", 14, similarImage,similarImagelink);
+                albumList.add(a8);
+                // linksMap.put("descriptionlink",description);
+                //linksMap.put("titlelink",title);
+            }
+            if(CollectionUtils.isNotEmpty(titlelist)||CollectionUtils.isNotEmpty(descriptionlist)) {
+                String similarImagelink = " ";
+
+                if(similarimageslist.size()>=1) {
+                    similarImagelink = similarimageslist.get(1);
+                } else{
+                    similarImagelink = similarimageslist.get(0);
+                }
+
+                    String title = titlelist.get(0);
+                String description = descriptionlist.get(0);
+                Log.d("title->",title);
+                Log.d("description->",description);
+                Album a8 = new Album("Click here for Descriptions..", 14, similarImagelink,description+":"+title);
+                albumList.add(a8);
+                // linksMap.put("descriptionlink",description);
+                //linksMap.put("titlelink",title);
+            }
+        }
+
+
+
+
+        //Connect to CardViewLayoutActivity
+           /* Intent youtubeserviceintent = new Intent(getActivity(), CardViewMainActivity.class);
+
+            youtubeserviceintent.putExtra("videolinks",)
+            startActivity(youtubeserviceintent);*/
+
+        linksMap.put("link",albumList);
+        linksMap.put("kgapiname",kapinamelist);
+        linksMap.put("kgapidescription",kapidescriptionlist);
+        linksMap.put("bestguess",bestguesslist);
+
+           return linksMap;
+
+    }
 
 
 
@@ -381,6 +506,7 @@ return null;
         System.out.println("titles---->" + p.getLinks());*/
        // System.out.println("BestGuess---->" + p.getImagebestguess());
 
+
         Pattern patternWikipedia = Pattern.compile(Constants.WIKIPEDIA_PATTERN, Pattern.CASE_INSENSITIVE); //incase u r not concerned about upper/lower case
         Pattern patternYoutube = Pattern.compile(Constants.YOUTUBE_PATTERN, Pattern.CASE_INSENSITIVE); //incase u r not concerned about upper/lower case
         Pattern patternLinkedIn = Pattern.compile(Constants.LINKEDIN_PATTERN, Pattern.CASE_INSENSITIVE);
@@ -389,6 +515,7 @@ return null;
         Pattern patternAmazon = Pattern.compile(Constants.AMAZON_PATTERN, Pattern.CASE_INSENSITIVE);
         Pattern patternAmazonUK = Pattern.compile(Constants.AMAZON_UK_PATTERN, Pattern.CASE_INSENSITIVE);
         Pattern patternGettyImages = Pattern.compile(Constants.GETTY_IMAGES_PATTERN, Pattern.CASE_INSENSITIVE);
+        Pattern patternGettyMediaImages = Pattern.compile(Constants.GETTY_MEDIA_IMAGES_PATTERN, Pattern.CASE_INSENSITIVE);
 
 
 
@@ -399,9 +526,9 @@ return null;
                     System.out.println("Wikipidea String... " + string);
                 videoWikilist.add(string);
 
-            } else if (patternYoutube.matcher(string).find()) {
+            } /*else if (patternYoutube.matcher(string).find()) {
                 youtubelist.add(string);
-            } else if (patternVimeo.matcher(string).find()) {
+            } */else if (patternVimeo.matcher(string).find()) {
                 if (string.startsWith(Constants.VIMEO_PATTERN))
                     vimeolist.add(string);
 
@@ -423,8 +550,8 @@ return null;
 
             }else{
                 generallinklist.add(string);
-            }if (patternGettyImages.matcher(string).find()) {
-                if (string.startsWith(Constants.GETTY_IMAGES_PATTERN))
+            }if (patternGettyImages.matcher(string).find()||patternGettyMediaImages.matcher(string).find()) {
+                if (string.startsWith(Constants.GETTY_IMAGES_PATTERN)||string.startsWith(Constants.GETTY_MEDIA_IMAGES_PATTERN))
                     gettyimageslist.add(string);
 
             }
@@ -433,7 +560,7 @@ return null;
         videolinksMap.put(Constants.YOUTUBE, youtubelist);
         videolinksMap.put(Constants.WIKIPEDIA, videoWikilist);
         videolinksMap.put(Constants.VIMEO, vimeolist);
-        videolinksMap.put(Constants.DAILY_MOTION, vimeolist);
+        videolinksMap.put(Constants.DAILY_MOTION, dailymotionlist);
         videolinksMap.put(Constants.AMAZON, amazonlist);
         videolinksMap.put(Constants.AMAZON_UK, amazonuklist);
         videolinksMap.put(Constants.LINKEDIN, linkedinlist);
@@ -452,7 +579,23 @@ return null;
             videolinksMap.put(Constants.IMAGEBESTGUESS, Lists.newArrayList(p.getImagebestguess()));
         }
 
+        if(!com.google.common.base.Strings.isNullOrEmpty(p.getYoutubelink())){
+            videolinksMap.put(Constants.YOUTUBE, Lists.newArrayList(p.getYoutubelink()));
+        }
 
+        if(CollectionUtils.isNotEmpty(p.getSimilar_images())){
+            videolinksMap.put(Constants.SIMILAR_IMAGES, Lists.newArrayList(p.getSimilar_images()));
+        }
+
+        if(!com.google.common.base.Strings.isNullOrEmpty(p.getKapiname())){
+            System.out.println("KPIName --->"+p.getKapiname());
+            videolinksMap.put(Constants.KPI_NAME, Lists.newArrayList(p.getKapiname()));
+        }
+
+        if(!com.google.common.base.Strings.isNullOrEmpty(p.getKapidescription())){
+            System.out.println("KPIDescription --->"+p.getKapidescription());
+            videolinksMap.put(Constants.KPI_DESCRIPTION, Lists.newArrayList(p.getKapidescription()));
+        }
 
 
         return videolinksMap;

@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -6,6 +11,8 @@
     android:paddingBottom="5dp"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
+    android:divider="@null"
+    android:dividerHeight="0dp"
     android:paddingTop="5dp" >
 
     <!-- This radio button is set to clickable:false so that the onclick listener of the entire row
@@ -16,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
         android:clickable="false"
         android:textColor="@color/darkorange"
         android:textSize="14sp"
@@ -28,6 +36,7 @@
         android:layout_alignParentTop="true"
         android:textColor="#ff0000"
         android:layout_toRightOf="@id/radioButton1" />
+
 
     <ProgressBar
         android:id="@+id/progressBar1"
@@ -61,5 +70,10 @@
         android:layout_alignLeft="@id/textBytes"
         android:textColor="#ff0000"
         android:layout_below="@id/textBytes" />
-
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/thumbnail" />
 </RelativeLayout>
+    </ScrollView>

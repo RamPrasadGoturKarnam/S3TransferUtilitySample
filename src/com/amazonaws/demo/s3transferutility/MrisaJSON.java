@@ -9,6 +9,34 @@ public class MrisaJSON {
 	private List<String> titles;
 	private String imagebestguess;
 
+	private String youtubelink;
+
+	private String kapiname;
+	private String kapidescription;
+
+	public String getKapiname() {
+		return kapiname;
+	}
+
+	public void setKapiname(String kapiname) {
+		this.kapiname = kapiname;
+	}
+
+	public String getKapidescription() {
+		return kapidescription;
+	}
+
+	public void setKapidescription(String kapidescription) {
+		this.kapidescription = kapidescription;
+	}
+
+	public String getYoutubelink() {
+		return youtubelink;
+	}
+	public void setYoutubelink(String youtubelink) {
+		this.youtubelink = youtubelink;
+	}
+
 	public String getImagebestguess() {
 		return imagebestguess;
 	}

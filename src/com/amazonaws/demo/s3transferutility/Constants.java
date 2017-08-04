@@ -43,6 +43,9 @@ public class Constants {
     public static final String BUCKET_REGION = Regions.US_EAST_1.getName().toString();
 
     public static final String YOUTUBE = "youtube";
+    public static final String KPI_NAME = "kpiname";
+    public static final String KPI_DESCRIPTION = "kpidescription";
+    public static final String SIMILAR_IMAGES = "similarimages";
     public static final String WIKIPEDIA = "wikipedia";
     public static final String VIMEO = "vimeo";
     public static final String AMAZON = "amazon";
@@ -67,4 +70,5 @@ public class Constants {
     public static final String AMAZON_PATTERN = "https://www.amazon.com/";
     public static final String AMAZON_UK_PATTERN = "https://www.amazon.co.uk/";
     public static final String GETTY_IMAGES_PATTERN = "http://www.gettyimages.com/photos/";
+    public static final String GETTY_MEDIA_IMAGES_PATTERN = "http://media.gettyimages.com/photos/";
 }

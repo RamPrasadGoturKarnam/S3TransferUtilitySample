@@ -17,6 +17,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.amazonaws.demo.s3transferutility.cardview.Album;
+import com.amazonaws.demo.s3transferutility.cardview.CardViewMainActivity;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -32,6 +34,7 @@ import java.net.URI;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -45,7 +48,17 @@ public class YoutubeServiceFragment extends Fragment {
     private static final String ACTION_FOR_INTENT_CALLBACK = "THIS_IS_A_UNIQUE_KEY_WE_USE_TO_COMMUNICATE";
 
     ProgressDialog progress;
+
+    public Bundle getBundlelinks() {
+        return bundlelinks;
+    }
+
+    public void setBundlelinks(Bundle bundlelinks) {
+        this.bundlelinks = bundlelinks;
+    }
+
     private TextView ourTextView;
+    private Bundle bundlelinks;
 
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -68,14 +81,24 @@ public class YoutubeServiceFragment extends Fragment {
     private void getContent() {
         // the request
         try {
+           // HashMap<String,List<String>> mMap = new HashMap<String,List<String>>();
+            HashMap<String,String> mMap = new HashMap<String,String>();
+            Bundle bundle =getArguments();
+            if(bundle.getSerializable("hashmap") != null) {
+                mMap = (HashMap<String, String>) bundle.getSerializable("hashmap");
+            }
+           // String bestguessString= bundle.getString("bestguesslink");
+            String bestguessString= mMap.get("bestguesslink");
+            Log.i("Youtube service-->",bestguessString);
+            this.setBundlelinks(bundle);
 
-            String videoname= this.getArguments().getString("videoname");
-            Log.i("videoname",videoname);
+           /* String youtubelink= bundle.getString("youtubelink");
+            System.out.println("direct youtubelink -->"+youtubelink);*/
 
 
           /* TestActivity activity = (TestActivity) getActivity();
             String videoname= activity.getIntent().getExtras().getString("videoname");*/
-            String imagename = URLEncoder.encode(videoname, "UTF-8");
+            String imagename = URLEncoder.encode(bestguessString, "UTF-8");
 
             String youtubeserviceURL=TEST_URL+imagename;
             Log.i("youtubeserviceURL",youtubeserviceURL);
@@ -129,12 +152,23 @@ public class YoutubeServiceFragment extends Fragment {
                 youtubelink = links.get(0);
             }
 
+            //Commented for Testing purpose
             Log.i("--Youtubelink----",youtubelink);
-            Intent intent1 = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubelink));
+           /* Intent intent1 = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubelink));
+            startActivity(intent1);*/
+            HashMap<String,List<Album>> mMaplinks = new HashMap<String,List<Album>>();
+            Bundle bundlelinks = getBundlelinks();
+            if(bundlelinks.getSerializable("hashmap") != null) {
+                mMaplinks = (HashMap<String, List<Album>>) bundlelinks.getSerializable("hashmap");
+            }
+
+
+           // mMaplinks.put("youtubelink",youtubelink);
+            Intent intent1 = new Intent(getActivity(),CardViewMainActivity.class);
+            intent1.putExtra("imagelinks",mMaplinks);
             startActivity(intent1);
-            //
-            // my old json code was here. this is where you would parse it.
-            //
+
+
         }
     };
 

@@ -1,4 +1,4 @@
-#Thu Jul 13 23:09:24 PDT 2017
+#Fri Aug 04 16:36:00 PDT 2017
 base.0=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6
 renamed.0=classes.dex
 file.0=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex

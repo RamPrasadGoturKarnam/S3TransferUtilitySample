@@ -11,13 +11,13 @@
                     "endOffset": 105
                 },
                 "from": {
-                    "file": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/values-w500dp/values.xml",
+                    "file": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/values-w500dp-v13/values-w500dp-v13.xml",
                     "position": {
-                        "startLine": 6,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 281,
+                        "startOffset": 55,
                         "endColumn": 54,
-                        "endOffset": 331
+                        "endOffset": 105
                     }
                 }
             }

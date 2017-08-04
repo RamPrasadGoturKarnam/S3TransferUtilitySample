@@ -33,6 +33,7 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.SimpleAdapter;
@@ -74,6 +75,17 @@ public class UploadActivity extends ListActivity {
     }
 
     private  String imageName;
+    private ImageView mImageView;
+
+    public String getBitmappath() {
+        return bitmappath;
+    }
+
+    public void setBitmappath(String bitmappath) {
+        this.bitmappath = bitmappath;
+    }
+
+    private String bitmappath;
 
     // Button for upload operations
     private Button btnUploadFile;
@@ -109,7 +121,7 @@ public class UploadActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
-
+        mImageView = (ImageView) findViewById(R.id.thumbnail);
         // Initializes TransferUtility, always do this before using it.
         transferUtility = Util.getTransferUtility(this);
         checkedIndex = INDEX_NOT_CHECKED;
@@ -171,10 +183,10 @@ public class UploadActivity extends ListActivity {
          */
         simpleAdapter = new SimpleAdapter(this, transferRecordMaps,
                 R.layout.record_item, new String[] {
-                        "checked", "fileName", "progress", "bytes", "state", "percentage"
+                        "checked", "fileName", "thumbnail", "progress", "bytes", "state", "percentage"
                 },
                 new int[] {
-                        R.id.radioButton1, R.id.textFileName, R.id.progressBar1, R.id.textBytes,
+                        R.id.radioButton1, R.id.textFileName,R.id.thumbnail, R.id.progressBar1, R.id.textBytes,
                         R.id.textState, R.id.textPercentage
                 });
         simpleAdapter.setViewBinder(new ViewBinder() {
@@ -188,7 +200,16 @@ public class UploadActivity extends ListActivity {
                         return true;
                     case R.id.textFileName:
                         TextView fileName = (TextView) view;
-                        fileName.setText((String) data);
+                       // fileName.setText((String) data);
+                        //System.out.println("Textview-->"+(data));
+                        setBitmappath((String) data);
+                        return true;
+                    case R.id.thumbnail:
+                      // System.out.println("Data-->"+getBitmappath());
+                       // Uri uri = Uri.fromFile(new File("/storage/sdcard/Pictures/CameraSample/IMG_20170701_190206_-1955301407.jpg"));
+
+                        ImageView thumbnail1 = (ImageView) view;
+                        thumbnail1.setImageBitmap(ThumbnailUtils.createImageThumbnail(getBitmappath(),3));
                         return true;
                     case R.id.progressBar1:
                         ProgressBar progress = (ProgressBar) view;

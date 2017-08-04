@@ -17,6 +17,7 @@ package com.amazonaws.demo.s3transferutility;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
@@ -170,6 +171,22 @@ public class Util {
     }
 
 
+    public static Bitmap getPreview(Uri uri) {
+        File image = new File(uri.getPath());
+
+        BitmapFactory.Options bounds = new BitmapFactory.Options();
+        bounds.inJustDecodeBounds = true;
+        BitmapFactory.decodeFile(image.getPath(), bounds);
+        if ((bounds.outWidth == -1) || (bounds.outHeight == -1))
+            return null;
+
+        int originalSize = (bounds.outHeight > bounds.outWidth) ? bounds.outHeight
+                : bounds.outWidth;
+
+        BitmapFactory.Options opts = new BitmapFactory.Options();
+        opts.inSampleSize = originalSize / originalSize*2;
+        return BitmapFactory.decodeFile(image.getPath(), opts);
+    }
 
 
 }

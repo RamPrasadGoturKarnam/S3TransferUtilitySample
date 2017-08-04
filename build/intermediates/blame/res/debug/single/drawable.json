@@ -1,27 +1,23 @@
 [
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/duck50.png",
-        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/duck50.png"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_dialog_material_background_light.xml"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_textfield_searchview_right_holo_light.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_textfield_searchview_right_holo_light.xml"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/album8.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/album8.png"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_ratingbar_full_material.xml"
     },
     {
         "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
-    },
-    {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/mickey1.gif",
-        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/mickey1.gif"
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/upload.png",
         "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/upload.png"
-    },
-    {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_search_dropdown_dark.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_search_dropdown_dark.xml"
     },
     {
         "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/kate.gif",
@@ -32,84 +28,76 @@
         "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/obama.gif"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_search_dropdown_light.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_search_dropdown_light.xml"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_ratingbar_indicator_material.xml"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/duck100.png",
-        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/duck100.png"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/album3.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/album3.png"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_btn_check_material.xml"
     },
     {
         "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/camera.png",
         "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/camera.png"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_ab_holo.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_tab_indicator_ab_holo.xml"
-    },
-    {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/ic_female.png",
-        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/ic_female.png"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_btn_colored_material.xml"
     },
     {
         "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/madhuri.jpg",
         "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/madhuri.jpg"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_textfield_searchview_holo_dark.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_textfield_searchview_holo_dark.xml"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_dialog_material_background_dark.xml"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_list_selector_holo_dark.xml"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_tab_indicator_material.xml"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_spinner_ab_holo_light.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_spinner_ab_holo_light.xml"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/album7.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/album7.png"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/prabhas1.gif",
-        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/prabhas1.gif"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_btn_borderless_material.xml"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/nikola.jpg",
-        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/nikola.jpg"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/album1.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/album1.png"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_ic_clear_holo_light.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_ic_clear_holo_light.xml"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/cover.jpg",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/cover.jpg"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_ic_clear.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_ic_clear.xml"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/dcac0cd17a7fe1ab0a0552de0b8c16d2b2434f67/output/res/drawable/design_snackbar_background.xml"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_textfield_searchview_holo_light.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_textfield_searchview_holo_light.xml"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/album6.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/album6.png"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/ic_launcher.png",
-        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/ic_launcher.png"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_textfield_searchview_right_holo_dark.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_textfield_searchview_right_holo_dark.xml"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/dcac0cd17a7fe1ab0a0552de0b8c16d2b2434f67/output/res/drawable/design_fab_background.xml"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_item_background_holo_light.xml"
-    },
-    {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
-    },
-    {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_list_selector_holo_light.xml"
-    },
-    {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_spinner_ab_holo_dark.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_spinner_ab_holo_dark.xml"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/album9.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/album9.png"
     },
     {
         "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/dicarpio.gif",
@@ -120,11 +108,131 @@
         "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/moditrump.jpg"
     },
     {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/dailymotion.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/dailymotion.png"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/duck50.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/duck50.png"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/youtubeicon.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/youtubeicon.png"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/album5.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/album5.png"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/mickey1.gif",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/mickey1.gif"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/youtubeicon3.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/youtubeicon3.png"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/duck100.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/duck100.png"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/ic_female.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/ic_female.png"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/album4.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/album4.png"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/prabhas1.gif",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/prabhas1.gif"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/album11.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/album11.png"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/nikola.jpg",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/nikola.jpg"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/album10.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/album10.png"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/ic_launcher.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/wikipedia.jpg",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/wikipedia.jpg"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
         "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/modi2.jpg",
         "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/modi2.jpg"
     },
     {
-        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
-        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/05828b0b7e824c39c15648c8024129b84a8229f3/output/res/drawable/abc_item_background_holo_dark.xml"
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/album2.png",
+        "source": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/res/drawable/album2.png"
+    },
+    {
+        "merged": "/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
+        "source": "/Users/ramprasadgoturkarnam/.android/build-cache/908c3de694229d2a9dde51f5e2491b1f090e366a/output/res/drawable/abc_btn_radio_material.xml"
     }
 ]

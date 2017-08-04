@@ -24,6 +24,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.amazonaws.demo.s3transferutility.YoutubeServiceFragment;
+import com.amazonaws.demo.s3transferutility.cardview.CardViewMainActivity;
 
 /*
  * This is the beginning screen that lets the user select if they want to upload or download
@@ -47,7 +48,7 @@ public class MainActivity extends Activity {
     private void initUI() {
        // btnDownload = (Button) findViewById(R.id.buttonDownloadMain);
         btnUpload = (Button) findViewById(R.id.buttonUploadMain);
-      //  btnInvokeYoutube = (Button) findViewById(R.id.buttonInvokeVideo);
+       //btnInvokeYoutube = (Button) findViewById(R.id.buttonInvokeVideo);
        // btnInvokeCurl = (Button) findViewById(R.id.buttonCurl);
 
 
@@ -67,15 +68,16 @@ public class MainActivity extends Activity {
             }
         });
 
+        //Testing purpose please comment it after Tested
        /* btnInvokeYoutube.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Intent intent = new Intent(MainActivity.this, TestActivity.class);
+                Intent intent = new Intent(MainActivity.this,CardViewMainActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
-        btnInvokeCurl.setOnClickListener(new OnClickListener() {
+       /* btnInvokeCurl.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(MainActivity.this, TestCurlActivity.class);

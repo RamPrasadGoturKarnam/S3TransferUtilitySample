@@ -1,4 +1,4 @@
-#Thu Jul 13 23:13:28 PDT 2017
+#Thu Aug 03 23:02:11 PDT 2017
 base.0=/Users/ramprasadgoturkarnam/Documents/Android-AWS-Sdk/aws-sdk-android-samples-master/S3TransferUtilitySample/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a704be96219d958e07e0c42b1f3eab438189dddd
 renamed.1=classes2.dex
 renamed.0=classes.dex
