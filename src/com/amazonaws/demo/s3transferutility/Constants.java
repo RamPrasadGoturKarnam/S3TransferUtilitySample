@@ -23,12 +23,14 @@ public class Constants {
      * You should replace these values with your own. See the README for details
      * on what to fill in.
      */
-    public static final String COGNITO_POOL_ID = "us-east-1:882d8a42-16ae-4594-81a5-687f6e58ed8f";
+    public static final String COGNITO_POOL_ID = "";
 
     /*
      * Region of your Cognito identity pool ID.
      */
-    public static final String COGNITO_POOL_REGION = Regions.US_EAST_1.getName().toString();
+    public static final String COGNITO_POOL_REGION = "";
+
+    public static final String imagelens_url = "http://10.0.2.2:8082/imagelens/v1/image/upload/";
 
     /*
      * Note, you must first create a bucket using the S3 console before running
@@ -40,7 +42,7 @@ public class Constants {
     /*
      * Region of your bucket.
      */
-    public static final String BUCKET_REGION = Regions.US_EAST_1.getName().toString();
+    public static final String BUCKET_REGION = "";
 
     public static final String YOUTUBE = "youtube";
     public static final String KPI_NAME = "kpiname";
@@ -58,7 +60,7 @@ public class Constants {
     public static final String IMAGEBESTGUESS = "imagebestguess";
     public static final String GENERIC_LINK = "genericlink";
     public static final String GETTY_IMAGES = "gettyimages";
-    public static final String REST_SERVICE_URI = "http://54.236.214.104:8082/SpringBootRestApi/api/image?imagename=";
+    public static final String REST_SERVICE_URI = "";
 
 
 
